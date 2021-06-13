@@ -3,9 +3,20 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import ColorButton from "../components/colorButton";
 import Country from "../components/country";
+import { useState, useEffect } from "react";
 /** @jsxImportSource theme-ui */
 
 export default function Home() {
+  const [countryList, setCountryList] = useState([]);
+
+  useEffect(() => {
+    fetch("https://restcountries.eu/rest/v2/all")
+      .then((res) => res.json())
+      .then((countryList) => {
+        setCountryList(countryList);
+        console.log(countryList);
+      });
+  }, []);
   return (
     <div>
       <Head>
@@ -47,46 +58,27 @@ export default function Home() {
             region="Asia"
             callingCode="+60"
           />
-          <Country
-            fullName="hi"
-            currency="yen"
-            language="hii"
-            capitalCity="JohorBahru"
-            region="Asia"
-            callingCode="+60"
-          />
-          <Country
-            fullName="hi"
-            currency="yen"
-            language="hii"
-            capitalCity="JohorBahru"
-            region="Asia"
-            callingCode="+60"
-          />
-          <Country
-            fullName="hi"
-            currency="yen"
-            language="hii"
-            capitalCity="JohorBahru"
-            region="Asia"
-            callingCode="+60"
-          />
-          <Country
-            fullName="hi"
-            currency="yen"
-            language="hii"
-            capitalCity="JohorBahru"
-            region="Asia"
-            callingCode="+60"
-          />
-          <Country
-            fullName="hi"
-            currency="yen"
-            language="hii"
-            capitalCity="JohorBahru"
-            region="Asia"
-            callingCode="+60"
-          />
+          {countryList.map(
+            ({
+              name,
+              callingCodes,
+              capital,
+              currencies,
+              languages,
+              region,
+            }) => (
+              <div key={name}>
+                <Country
+                  fullName={name}
+                  currency={currencies}
+                  language={languages}
+                  capitalCity={capital}
+                  region={region}
+                  callingCode={callingCodes}
+                />
+              </div>
+            )
+          )}
         </div>
       </main>
 
