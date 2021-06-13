@@ -113,3 +113,23 @@ export default function Home() {
 //     },
 //   };
 // }
+
+function createCountry(name, callingCodes, capital, currencies, languages, region) {
+  const obj = {};
+  obj.name = name;
+  obj.callingCodes = callingCodes;
+  obj.capital = capital;
+  obj.currencies = currencies;
+  obj.languages = languages;
+  obj.region = region;
+  return obj;
+}
+
+function sortCountries(countries_list_json) {
+  var countries_array = []; // thing
+  for (let i = 0; i < countries_list_json.length; i++) {
+    countryInstance = createCountry(countries_list_json[i]['name'], countries_list_json[i]['callingCodes'], countries_list_json[i]['capital'], countries_list_json[i]['currencies'], countries_list_json[i]['languages'], countries_list_json[i]['region']);
+    countries_array.push(countryInstance);
+  }
+  return countries_array; // Return not needed!
+}
