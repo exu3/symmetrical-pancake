@@ -1,11 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
-import Label from "../components/Label";
 import styles from "../styles/Home.module.css";
 import ColorButton from "../components/colorButton";
 import Country from "../components/country";
 /** @jsxImportSource theme-ui */
-
 
 export default function Home() {
   return (
@@ -18,22 +16,71 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main>
           <div className={styles.titleBg} sx={{backgroundColor: 'text'}}>
         <ColorButton className={styles.toggle} sx={{backgroundColor: 'text', color: 'background'}}/>
           <h2 sx={{color: 'background'}}>what if you could travel anywhere in the world,</h2>
           <h1 sx={{color: 'background'}}>where would you go?</h1>
           </div>
-        <Country fullName="hi" currency="yen" language="hii" capitalCity="JohorBahru" region="Asia" callingCode="+60" />
-        <section>
-          {/* <input placeholder="seacrh bar idk if it iwill work" /> */}
-          {/* <div className={styles.items}>
-            <Label countryName="hi" />
-            <Label countryName="hi" />
-            <Label countryName="hi" />
-            <Label countryName="hi" />
-          </div> */}
+                <div
+          sx={{
+            display: "grid",
+            gridTemplateColumns: [
+              "repeat(1, minmax(0, 1fr))",
+              "repeat(2, minmax(0, 1fr))",
+              "repeat(3, minmax(0, 1fr))",
+            ],
+            placeItems: "center",
+          }}
+        >
+          <Country
+            fullName="hi"
+            currency="yen"
+            language="hii"
+            capitalCity="JohorBahru"
+            region="Asia"
+            callingCode="+60"
+          />
+          <Country
+            fullName="hi"
+            currency="yen"
+            language="hii"
+            capitalCity="JohorBahru"
+            region="Asia"
+            callingCode="+60"
+          />
+          <Country
+            fullName="hi"
+            currency="yen"
+            language="hii"
+            capitalCity="JohorBahru"
+            region="Asia"
+            callingCode="+60"
+          />
+          <Country
+            fullName="hi"
+            currency="yen"
+            language="hii"
+            capitalCity="JohorBahru"
+            region="Asia"
+            callingCode="+60"
+          />
+          <Country
+            fullName="hi"
+            currency="yen"
+            language="hii"
+            capitalCity="JohorBahru"
+            region="Asia"
+            callingCode="+60"
+          />
+          <Country
+            fullName="hi"
+            currency="yen"
+            language="hii"
+            capitalCity="JohorBahru"
+            region="Asia"
+            callingCode="+60"
+          />
         </section>
       </main>
 
@@ -42,8 +89,9 @@ export default function Home() {
           href="https://codeday.com"
           target="_blank"
           rel="noopener noreferrer"
-        >By Ice Bear 🐻‍❄️ for codeDay 2021
+        >Made by Ice Bear 🐻‍❄️ with &hearts; for Virtual CodeDay 2021
         </a>
+
       </footer>
     </div>
   );
