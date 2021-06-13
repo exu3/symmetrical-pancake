@@ -16,19 +16,13 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main sx={{ minHeight: "100vh" }}>
-        <div className={styles.titleBg} sx={{ backgroundColor: "text" }}>
-          <ColorButton
-            className={styles.toggle}
-            sx={{ backgroundColor: "text", color: "background" }}
-          />
-          <h2 sx={{ color: "background" }}>
-            what if you could travel anywhere in the world,
-          </h2>
-          <h1 sx={{ color: "background" }}>where would you go?</h1>
-        </div>
-        <div
+      <main>
+          <div className={styles.titleBg} sx={{backgroundColor: 'text'}}>
+        <ColorButton className={styles.toggle} sx={{backgroundColor: 'text', color: 'background'}}/>
+          <h2 sx={{color: 'background'}}>what if you could travel anywhere in the world,</h2>
+          <h1 sx={{color: 'background'}}>where would you go?</h1>
+          </div>
+                <div
           sx={{
             display: "grid",
             gridTemplateColumns: [
@@ -87,19 +81,18 @@ export default function Home() {
             region="Asia"
             callingCode="+60"
           />
+              
         </div>
       </main>
 
-      <footer>
-        <p
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            position: "relative",
-          }}
-        >
-          Made with &hearts; at Virtual CodeDay.
-        </p>
+      <footer className={styles.footer}>
+        <a
+          href="https://codeday.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Made by Ice Bear 🐻‍❄️ with &hearts; for Virtual CodeDay 2021
+        </a>
+
       </footer>
     </div>
   );
