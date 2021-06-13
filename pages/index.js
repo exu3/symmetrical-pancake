@@ -1,11 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
-import Label from "../components/Label";
 import styles from "../styles/Home.module.css";
 import ColorButton from "../components/colorButton";
 import Country from "../components/country";
 /** @jsxImportSource theme-ui */
-
 
 export default function Home() {
   return (
@@ -19,35 +17,89 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-          <div className={styles.titleBg} sx={{backgroundColor: 'text'}}>
-        <ColorButton className={styles.toggle} sx={{backgroundColor: 'text', color: 'background'}}/>
-          <h2 sx={{color: 'background'}}>what if you could travel anywhere in the world,</h2>
-          <h1 sx={{color: 'background'}}>where would you go?</h1>
-          </div>
-        <Country fullName="hi" currency="yen" language="hii" capitalCity="JohorBahru" region="Asia" callingCode="+60" />
-        <section>
-          <input placeholder="seacrh bar idk if it iwill work" />
-          <div className={styles.items}>
-            <Label countryName="hi" />
-            <Label countryName="hi" />
-            <Label countryName="hi" />
-            <Label countryName="hi" />
-          </div>
-        </section>
+      <main sx={{ minHeight: "100vh" }}>
+        <div className={styles.titleBg} sx={{ backgroundColor: "text" }}>
+          <ColorButton
+            className={styles.toggle}
+            sx={{ backgroundColor: "text", color: "background" }}
+          />
+          <h2 sx={{ color: "background" }}>
+            what if you could travel anywhere in the world,
+          </h2>
+          <h1 sx={{ color: "background" }}>where would you go?</h1>
+        </div>
+        <div
+          sx={{
+            display: "grid",
+            gridTemplateColumns: [
+              "repeat(1, minmax(0, 1fr))",
+              "repeat(2, minmax(0, 1fr))",
+              "repeat(3, minmax(0, 1fr))",
+            ],
+            placeItems: "center",
+          }}
+        >
+          <Country
+            fullName="hi"
+            currency="yen"
+            language="hii"
+            capitalCity="JohorBahru"
+            region="Asia"
+            callingCode="+60"
+          />
+          <Country
+            fullName="hi"
+            currency="yen"
+            language="hii"
+            capitalCity="JohorBahru"
+            region="Asia"
+            callingCode="+60"
+          />
+          <Country
+            fullName="hi"
+            currency="yen"
+            language="hii"
+            capitalCity="JohorBahru"
+            region="Asia"
+            callingCode="+60"
+          />
+          <Country
+            fullName="hi"
+            currency="yen"
+            language="hii"
+            capitalCity="JohorBahru"
+            region="Asia"
+            callingCode="+60"
+          />
+          <Country
+            fullName="hi"
+            currency="yen"
+            language="hii"
+            capitalCity="JohorBahru"
+            region="Asia"
+            callingCode="+60"
+          />
+          <Country
+            fullName="hi"
+            currency="yen"
+            language="hii"
+            capitalCity="JohorBahru"
+            region="Asia"
+            callingCode="+60"
+          />
+        </div>
       </main>
 
       <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <p
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            position: "relative",
+          }}
         >
-          Powered by{" "}
-          <span>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+          Made with &hearts; at Virtual CodeDay.
+        </p>
       </footer>
     </div>
   );
