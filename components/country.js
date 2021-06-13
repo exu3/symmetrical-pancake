@@ -2,7 +2,7 @@
 import styles from "../styles/Home.module.css";
 
 
-export default function Country({fullName, currency, language, capitalCity, region, callingCode}) {
+export default function Country({fullName, currency, language, area, region, callingCode}) {
 return (
     <div className={styles.countryCard}
     >
@@ -25,7 +25,7 @@ return (
       >
         📢 {language}
       </a>
-      <a className={styles.br} />
+      {/* <a className={styles.br} /> */}
       <a
         className={styles.tag}
         sx={{ backgroundColor: "text", color: "background" }}
@@ -36,7 +36,7 @@ return (
         className={styles.tag}
         sx={{ backgroundColor: "text", color: "background" }}
       >
-        🌟 {capitalCity}
+         ⛰ {area}
       </a>
     </div>
   );
