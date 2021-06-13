@@ -3,3 +3,32 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.titleBg {
+  width: 100vw;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.titleBg h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+.titleBg h2 {
+  padding-top: 15px;
+  text-align: center;
+}
+
+.tag {
+  padding: 7px;
+  margin: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.br {
+  line-height: 60px;
+  display: block;
+  margin: 30px;
+}
