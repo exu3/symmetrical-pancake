@@ -1,6 +1,5 @@
-import React from 'react';
 import { Moon, Sun } from "react-feather";
-import { IconButton, useColorMode } from 'theme-ui';
+import { IconButton, useColorMode } from "theme-ui";
 
 function ColorButton({ ...props }) {
   const [colorMode, setColorMode] = useColorMode();
@@ -14,7 +13,7 @@ function ColorButton({ ...props }) {
       mx="5px"
       background="inherit"
       onClick={(e) => {
-        setColorMode(colorMode === 'default' ? 'dark' : 'default')
+        setColorMode(colorMode === "default" ? "dark" : "default");
       }}
       {...props}
     >
