@@ -27,26 +27,22 @@ export default function Home() {
           </div>
         <Country fullName="hi" currency="yen" language="hii" capitalCity="JohorBahru" region="Asia" callingCode="+60" />
         <section>
-          <input placeholder="seacrh bar idk if it iwill work" />
-          <div className={styles.items}>
+          {/* <input placeholder="seacrh bar idk if it iwill work" /> */}
+          {/* <div className={styles.items}>
             <Label countryName="hi" />
             <Label countryName="hi" />
             <Label countryName="hi" />
             <Label countryName="hi" />
-          </div>
+          </div> */}
         </section>
       </main>
 
-      <footer>
+      <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://codeday.com"
           target="_blank"
           rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
+        >By Ice Bear 🐻‍❄️ for codeDay 2021
         </a>
       </footer>
     </div>
