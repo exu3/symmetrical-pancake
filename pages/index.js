@@ -81,7 +81,8 @@ export default function Home() {
             region="Asia"
             callingCode="+60"
           />
-        </section>
+              
+        </div>
       </main>
 
       <footer className={styles.footer}>
