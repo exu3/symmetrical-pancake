@@ -22,13 +22,25 @@
   text-align: center;
 }
 
+.titleBg p {
+  margin: 0;
+  padding-top: 15px;
+  text-align: center;
+}
+
 .toggle {
   position: absolute;
   right: 10px;
   top: 10px;
 }
 
+.container {
+  align-items: flex-start;
+}
 .countryCard {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 20vw;
   margin: 30px;
   border-color: grey;
   border-radius: 10px;
@@ -42,6 +54,8 @@
   margin: 0;
   margin-bottom: 10px;
   margin-left: 3px;
+  display: block;
+  width:20vw;
 }
 
 .tag {
@@ -58,8 +72,8 @@
 }
 
 .footer {
-  position: absolute;
-  bottom: 10px;
+  position: relative;
+  bottom: 5px;
   width: 100%;
   text-align: center;
 }
