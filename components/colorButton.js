@@ -1,5 +1,5 @@
 import { Moon, Sun } from "react-feather";
-import { IconButton, useColorMode } from "theme-ui";
+import { IconButton, useColorMode } from 'theme-ui';
 
 function ColorButton({ ...props }) {
   const [colorMode, setColorMode] = useColorMode();
@@ -23,3 +23,4 @@ function ColorButton({ ...props }) {
 }
 
 export default ColorButton;
+
