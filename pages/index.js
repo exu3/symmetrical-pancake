@@ -158,7 +158,7 @@ export default function Home() {
             className={styles.countryCard}
           /> 
           <Country
-            fullName="Malaysia 🇱🇮"
+            fullName="Malaysia 🇲🇾"
             currency="Ringgit"
             language="Bahasa Melayu"
             region="Asia"
@@ -207,6 +207,26 @@ export default function Home() {
 
             className={styles.countryCard}
           /> 
+          <Country
+            fullName="San Marino 🇸🇲"
+            currency="Euro"
+            language="Italian"
+            region="Europe"
+            area="23 sq mi"
+            callingCode="+378"
+
+            className={styles.countryCard}
+          />
+          <Country
+            fullName="Trinidad and Tobago 🇹🇹"
+            currency="Trinidad and Tobago dollar"
+            language="English, Hindi & Chinese"
+            region="South America"
+            area="1,981 sq mi"
+            callingCode="+868"
+
+            className={styles.countryCard}
+          />
           <Country
             fullName="Uruguay 🇺🇾"
             currency="Uruguay peso"
